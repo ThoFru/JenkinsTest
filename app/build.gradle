@@ -1,8 +1,28 @@
+buildscript {
+    repositories {
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.2.3'
+        classpath 'com.github.JakeWharton:sdk-manager-plugin:0ce4cdf08009d79223850a59959d9d6e774d0f77'
+    }
+}
+
+apply plugin: 'android-sdk-manager'
+apply plugin: 'com.android.application'
+
+// optionally including an emulator
+sdkManager {
+    emulatorVersion 'android-19'
+    emulatorArchitecture 'armeabi-v7a' // optional, defaults to arm
+}
+
 apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 22
-    buildToolsVersion "23.0.0 rc1"
+    buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.tfruchar.jenkinstest"
