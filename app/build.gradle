@@ -11,6 +11,7 @@ buildscript {
 
 apply plugin: 'android-sdk-manager'
 apply plugin: 'com.android.application'
+apply from: '../config/quality.gradle'
 
 // optionally including an emulator
 sdkManager {
