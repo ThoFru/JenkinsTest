@@ -18,8 +18,6 @@ sdkManager {
     emulatorArchitecture 'armeabi-v7a' // optional, defaults to arm
 }
 
-apply plugin: 'com.android.application'
-
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
