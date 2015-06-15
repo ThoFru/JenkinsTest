@@ -1,4 +1,4 @@
-/*buildscript {
+buildscript {
     repositories {
         jcenter()
         maven { url 'https://jitpack.io' }
@@ -16,10 +16,9 @@ apply plugin: 'com.android.application'
 sdkManager {
     emulatorVersion 'android-19'
     emulatorArchitecture 'armeabi-v7a' // optional, defaults to arm
-}*/
+}
 
 apply plugin: 'com.android.application'
-apply plugin: 'checkstyle'
 
 android {
     compileSdkVersion 22
@@ -46,9 +45,6 @@ android {
     }
 }
 
-checkstyle {
-    configFile = new File(rootDir, "checkstyle.xml")
-}
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
