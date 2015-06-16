@@ -5,7 +5,7 @@ apply plugin: 'pmd'
 check.dependsOn 'checkstyle', 'findbugs', 'pmd'
 
 task checkstyle(type: Checkstyle) {
-    configFile file("${project.rootDir}/config/quality/checkstyle/checkstyle.xml")
+    configFile file("${project.rootDir}/config/checkstyle/checkstyle.xml")
     source 'src'
     include '**/*.java'
     exclude '**/gen/**'
@@ -17,7 +17,7 @@ task findbugs(type: FindBugs) {
     ignoreFailures = true
     effort = "max"
     reportLevel = "high"
-    excludeFilter = new File("${project.rootDir}/config/quality/findbugs/findbugs-filter.xml")
+    excludeFilter = new File("${project.rootDir}/config/findbugs/findbugs-filter.xml")
     classes = files("$project.buildDir/intermediates/classes/")
 
     source 'src'
@@ -35,7 +35,7 @@ task findbugs(type: FindBugs) {
 }
 
 task pmd(type: Pmd) {
-    ruleSetFiles = files("${project.rootDir}/config/quality/pmd/pmd-ruleset.xml")
+    ruleSetFiles = files("${project.rootDir}/config/pmd/pmd-ruleset.xml")
     ignoreFailures = true
     ruleSets = ["java-basic", "java-braces", "java-strings"]
 
