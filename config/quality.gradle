@@ -10,6 +10,13 @@ task checkstyle(type: Checkstyle) {
     include '**/*.java'
     exclude '**/gen/**'
 
+    reports {
+        xml {
+            destination "$project.buildDir/reports/checkstyles/checkstyle.xml"
+            xml.withMessages true
+        }
+    }
+
     classpath = files()
 }
 
