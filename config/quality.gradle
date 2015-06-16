@@ -13,7 +13,6 @@ task checkstyle(type: Checkstyle) {
     reports {
         xml {
             destination "$project.buildDir/reports/checkstyles/checkstyle.xml"
-            xml.withMessages true
         }
     }
 
