@@ -5,6 +5,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.accounts.AbstractAccountAuthenticator;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -14,7 +15,9 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toast.makeText(this, "TEST", Toast.LENGTH_SHORT).show();
+        boolean value = true;
+        if (true)
+            Toast.makeText(this, "TEST", Toast.LENGTH_SHORT).show();
 
     }
 
