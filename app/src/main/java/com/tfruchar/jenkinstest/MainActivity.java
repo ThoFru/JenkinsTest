@@ -5,7 +5,9 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
-import android.accounts.AbstractAccountAuthenticator;
+
+import java.util.ArrayList;
+import java.util.List;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -15,10 +17,17 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        List<Object> objectList = new ArrayList<Object>();
+
+        objectList.add("Coucou");
+        objectList.add(2);
+
+
         boolean value = true;
         if (true)
-            Toast.makeText(this, "TEST", Toast.LENGTH_SHORT).show();
-
+            for (Object o : objectList) {
+                Toast.makeText(this, ((String) o).toUpperCase(), Toast.LENGTH_SHORT).show();
+            }
     }
 
     @Override
