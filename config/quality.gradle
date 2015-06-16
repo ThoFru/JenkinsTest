@@ -12,7 +12,7 @@ task checkstyle(type: Checkstyle) {
 
     reports {
         xml {
-            destination "$project.buildDir/reports/checkstyles/checkstyle.xml"
+            destination "$project.buildDir/reports/checkstyle/checkstyle.xml"
         }
     }
 
