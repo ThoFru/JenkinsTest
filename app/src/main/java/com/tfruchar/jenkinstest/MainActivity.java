@@ -17,17 +17,11 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        List<Object> objectList = new ArrayList<Object>();
-
-        objectList.add("Coucou");
-        objectList.add(2);
-
+        Object o = null;
 
         boolean value = true;
         if (true)
-            for (Object o : objectList) {
                 Toast.makeText(this, ((String) o).toUpperCase(), Toast.LENGTH_SHORT).show();
-            }
     }
 
     @Override
