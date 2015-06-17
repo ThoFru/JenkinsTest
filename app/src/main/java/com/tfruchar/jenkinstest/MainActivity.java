@@ -4,10 +4,9 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Toast;
 
-import java.util.ArrayList;
-import java.util.List;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -17,11 +16,8 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Object o = null;
+        ButterKnife.inject(this);
 
-        boolean value = true;
-        if (true)
-                Toast.makeText(this, ((String) o).toUpperCase(), Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -44,5 +40,11 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @OnClick(R.id.button)
+    protected void onButtonClicked() {
+        Object nullObject = null;
+        nullObject.toString();
     }
 }
