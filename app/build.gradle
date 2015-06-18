@@ -25,7 +25,7 @@ android {
 
     defaultConfig {
         applicationId "com.tfruchar.jenkinstest"
-        minSdkVersion 15
+        minSdkVersion 7
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
