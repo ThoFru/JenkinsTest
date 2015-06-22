@@ -19,18 +19,26 @@ sdkManager {
     emulatorArchitecture 'armeabi-v7a' // optional, defaults to arm
 }
 
+
+
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
 
     defaultConfig {
         applicationId "com.tfruchar.jenkinstest"
-        minSdkVersion 7
+        minSdkVersion 8
         targetSdkVersion 22
         versionCode 3
         versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
 
+    android {
+        packagingOptions {
+            exclude 'LICENSE.txt'
+        }
+    }
 
     signingConfigs {
 
@@ -62,4 +70,6 @@ dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.jakewharton:butterknife:6.1.0'
+    androidTestCompile 'com.android.support.test.espresso:espresso-core:2.2'
+    androidTestCompile 'com.android.support.test:runner:0.3'
 }
